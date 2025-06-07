@@ -27,9 +27,9 @@ const projects = [
 
 const LatestProject = () => {
   return (
-    <section>
+    <section id="project">
       <div id="portfolio">
-        <div className="main-text" id="project">
+        <div className="main-text">
           <h2>
             Latest <span>Project</span>
           </h2>

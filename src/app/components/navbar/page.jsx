@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from "react";
 import "boxicons/css/boxicons.min.css";
 import Typed from "typed.js";
 import "./navbar.css";
+import Services from "./../services/page";
 
 const Navbar = () => {
   const typedElement = useRef(null);
@@ -32,13 +33,14 @@ const Navbar = () => {
         <nav className="navbar">
           <a href="#">Home</a>
 
-          <a href="#">About</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#skills">Skills</a>
+          <a href="#project">Projects</a>
 
-          <a href="#">Skill</a>
+          <a href="/resume.pdf">Resume</a>
 
-          <a href="#">Resume</a>
-
-          <a href="#">Contact</a>
+          <a href="#contact">Contact</a>
         </nav>
       </header>
 
@@ -56,21 +58,40 @@ const Navbar = () => {
           </p>
 
           <div className="home-sci">
-            <a href="#">
-              <i className="bx bxl-facebook"></i>
+            <a
+              href="mailto:ifeanyitochipraise@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="bx bxl-gmail"></i>
             </a>
-            <a href="#">
+
+            <a
+              href="https://wa.me/2348133213198"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="bx bxl-whatsapp"></i>
             </a>
-            <a href="#">
+
+            <a
+              href="https://www.linkedin.com/in/tochi-ifeanyiokoronkwo/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="bx bxl-linkedin"></i>
             </a>
-            <a href="#">
+
+            <a
+              href="https://github.com/ifytochez"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="bx bxl-github"></i>
             </a>
           </div>
 
-          <a href="#" className="btn-box">
+          <a href="#about" className="btn-box">
             More About Me
           </a>
         </div>

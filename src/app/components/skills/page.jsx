@@ -2,7 +2,7 @@ import styles from "./skills.module.css";
 
 const Skills = () => {
   return (
-    <section className={styles.skillsSection}>
+    <section className={styles.skillsSection} id="skills">
       <h2 className={styles.heading}>
         My <span className={styles.highlight}>Skills</span>
       </h2>
@@ -11,70 +11,57 @@ const Skills = () => {
         <div className={styles.technical}>
           <h3 className={styles.subheading}>Technical Skills</h3>
 
-          <div className={styles.barWrapper}>
-            <span className={styles.techLabel}>HTML</span>
-            <i
-              className="bx bxl-html5"
-              style={{ fontSize: "1.5rem", color: "#e34c26" }}
-            ></i>
-            <div className={styles.bar}>
-              <div style={{ width: "90%" }} className={styles.fill}>
-                <span className={styles.barLabel}>90%</span>
+          {[
+            { label: "HTML", percent: 90, icon: "bxl-html5", color: "#e34c26" },
+            { label: "CSS", percent: 90, icon: "bxl-css3", color: "#264de4" },
+            {
+              label: "JavaScript",
+              percent: 70,
+              icon: "bxl-javascript",
+              color: "#f0db4f",
+            },
+            {
+              label: "React",
+              percent: 80,
+              icon: "bxl-react",
+              color: "#61dafb",
+            },
+            {
+              label: "NextJs",
+              percent: 50,
+              icon: "bx-code-alt",
+              color: "#ffffff",
+            },
+            {
+              label: "Tailwind",
+              percent: 80,
+              icon: "bxl-tailwind-css",
+              color: "#38bdf8",
+            },
+            { label: "SASS", percent: 75, icon: "bxl-sass", color: "#cd6799" },
+            {
+              label: "TypeScript",
+              percent: 85,
+              icon: "bxl-typescript",
+              color: "#3178c6",
+            },
+          ].map((skill, index) => (
+            <div key={index} className={styles.barWrapper}>
+              <span className={styles.techLabel}>{skill.label}</span>
+              <i
+                className={`bx ${skill.icon}`}
+                style={{ fontSize: "1.5rem", color: skill.color }}
+              ></i>
+              <div className={styles.bar}>
+                <div
+                  style={{ width: `${skill.percent}%` }}
+                  className={styles.fill}
+                >
+                  <span className={styles.barLabel}>{skill.percent}%</span>
+                </div>
               </div>
             </div>
-          </div>
-
-          <div className={styles.barWrapper}>
-            <span className={styles.techLabel}>CSS</span>
-            <i
-              className="bx bxl-css3"
-              style={{ fontSize: "1.5rem", color: "#264de4" }}
-            ></i>
-            <div className={styles.bar}>
-              <div style={{ width: "90%" }} className={styles.fill}>
-                <span className={styles.barLabel}>90%</span>
-              </div>
-            </div>
-          </div>
-
-          <div className={styles.barWrapper}>
-            <span className={styles.techLabel}>JavaScript</span>
-            <i
-              className="bx bxl-javascript"
-              style={{ fontSize: "1.5rem", color: "#f0db4f" }}
-            ></i>
-            <div className={styles.bar}>
-              <div style={{ width: "70%" }} className={styles.fill}>
-                <span className={styles.barLabel}>70%</span>
-              </div>
-            </div>
-          </div>
-
-          <div className={styles.barWrapper}>
-            <span className={styles.techLabel}>React</span>
-            <i
-              className="bx bxl-react"
-              style={{ fontSize: "1.5rem", color: "#61dafb" }}
-            ></i>
-            <div className={styles.bar}>
-              <div style={{ width: "80%" }} className={styles.fill}>
-                <span className={styles.barLabel}>80%</span>
-              </div>
-            </div>
-          </div>
-
-          <div className={styles.barWrapper}>
-            <span className={styles.techLabel}>NextJs</span>
-            <i
-              className="bx bx-code-alt"
-              style={{ fontSize: "1.5rem", color: "#fff" }}
-            ></i>
-            <div className={styles.bar}>
-              <div style={{ width: "50%" }} className={styles.fill}>
-                <span className={styles.barLabel}>50%</span>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
 
         <div className={styles.professional}>
@@ -82,24 +69,30 @@ const Skills = () => {
           <div className={styles.circularWrapper}>
             {[
               { label: "Collaboration", value: 90 },
-              { label: "Communication", value: 100 },
-              { label: "Problem Solving", value: 80 },
+              { label: "Communication", value: 95 },
+              { label: "Problem Solving", value: 85 },
               { label: "Resilience", value: 90 },
+              { label: "Agile Methodologies", value: 85 },
+              { label: "Time Management", value: 88 },
+              { label: "Code Review", value: 80 },
+              { label: "Adaptability", value: 87 },
+              { label: "Attention to Detail", value: 92 },
+              { label: "Creativity", value: 80 },
             ].map((skill, index) => (
               <div key={index} className={styles.circle}>
                 <svg viewBox="0 0 36 36" className={styles.svg}>
                   <path
                     className={styles.bg}
                     d="M18 2.0845
-                      a 15.9155 15.9155 0 0 1 0 31.831
-                      a 15.9155 15.9155 0 0 1 0 -31.831"
+              a 15.9155 15.9155 0 0 1 0 31.831
+              a 15.9155 15.9155 0 0 1 0 -31.831"
                   />
                   <path
                     className={styles.progress}
                     strokeDasharray={`${skill.value}, 100`}
                     d="M18 2.0845
-                      a 15.9155 15.9155 0 0 1 0 31.831
-                      a 15.9155 15.9155 0 0 1 0 -31.831"
+              a 15.9155 15.9155 0 0 1 0 31.831
+              a 15.9155 15.9155 0 0 1 0 -31.831"
                   />
                   <text x="18" y="20.35" className={styles.percentage}>
                     {skill.value}%
