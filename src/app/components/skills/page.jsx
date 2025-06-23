@@ -72,12 +72,12 @@ const Skills = () => {
               { label: "Communication", value: 95 },
               { label: "Problem Solving", value: 85 },
               { label: "Resilience", value: 90 },
+              { label: "Attention to Detail", value: 92 },
+              { label: "Creativity", value: 80 },
               { label: "Agile Methodologies", value: 85 },
               { label: "Time Management", value: 88 },
               { label: "Code Review", value: 80 },
               { label: "Adaptability", value: 87 },
-              { label: "Attention to Detail", value: 92 },
-              { label: "Creativity", value: 80 },
             ].map((skill, index) => (
               <div key={index} className={styles.circle}>
                 <svg viewBox="0 0 36 36" className={styles.svg}>

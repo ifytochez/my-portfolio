@@ -49,7 +49,7 @@ body {
 
 .home {
   position: relative;
-  width: 100%;
+  /* width: 100%; */
   justify-content: space-between;
   height: 100vh;
   background: #081c29;
@@ -201,5 +201,130 @@ body {
   100% {
     transform: translateY(0px);
     opacity: 1;
+  }
+}
+
+/* ========= RESPONSIVE STYLES ========= */
+
+/* Small laptops and below (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .header {
+    padding: 15px 5%;
+  }
+
+  .navbar a {
+    font-size: 18px;
+    margin-left: 20px;
+  }
+
+  .home-content h1 {
+    font-size: 42px;
+  }
+
+  .home-content h3 {
+    font-size: 28px;
+  }
+
+  .home-content p {
+    font-size: 18px;
+  }
+
+  .home-img {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+/* Tablets and large phones (max-width: 768px) */
+@media (max-width: 768px) {
+  .navbar {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    width: 200px;
+    height: calc(100vh - 70px);
+    background-color: #051129;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    transition: right 0.3s ease-in-out;
+    z-index: 99;
+  }
+
+  .navbar.active {
+    right: 0;
+  }
+
+  .navbar a {
+    display: block;
+    margin: 15px 0;
+    font-size: 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  .home {
+    flex-direction: column;
+    padding-top: 100px;
+    text-align: center;
+  }
+
+  .home-img {
+    width: 300px;
+    height: 300px;
+    margin-top: 40px;
+  }
+
+  .home-content h1 {
+    font-size: 36px;
+  }
+
+  .home-content h3 {
+    font-size: 24px;
+  }
+
+  .home-content p {
+    font-size: 16px;
+  }
+}
+
+/* Phones (max-width: 480px) */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 20px;
+  }
+
+  .home-img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .home-content h1 {
+    font-size: 28px;
+  }
+
+  .home-content h3 {
+    font-size: 20px;
+  }
+
+  .home-content p {
+    font-size: 14px;
+  }
+
+  .btn-box {
+    padding: 10px 25px;
+    font-size: 14px;
+  }
+
+  .home-sci a {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
   }
 }

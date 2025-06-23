@@ -88,3 +88,41 @@
 .row:hover .layer {
   height: 100%;
 }
+@media (max-width: 599px) {
+  #portfolio {
+    height: auto;
+    padding: 40px 5%;
+  }
+
+  .main-text h2 {
+    font-size: 32px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: start;
+  }
+
+  .portfolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(359px, auto));
+  }
+}
+
+/* Tablet (min-width: 600px) and below desktop */
+@media (min-width: 600px) and (max-width: 899px) {
+  #portfolio {
+    height: auto;
+    padding: 40px 6%;
+  }
+
+  .main-text h2 {
+    font-size: 42px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    text-align: start;
+  }
+
+  .portfolio-content {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
