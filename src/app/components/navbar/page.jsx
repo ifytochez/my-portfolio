@@ -4,7 +4,6 @@ import React, { useEffect, useRef, useState } from "react";
 import "boxicons/css/boxicons.min.css";
 import Typed from "typed.js";
 import "./navbar.css";
-import Services from "./../services/page";
 
 const Navbar = () => {
   const typedElement = useRef(null);
@@ -18,7 +17,7 @@ const Navbar = () => {
       typeSpeed: 50,
       backSpeed: 25,
       backDelay: 1500,
-      loop: true,
+      loop: true
     });
 
     return () => typed.destroy();
@@ -33,7 +32,7 @@ const Navbar = () => {
 
         <i
           className="bx bx-menu menu-toggle"
-          onClick={() => setMenuOpen((prev) => !prev)}
+          onClick={() => setMenuOpen(prev => !prev)}
         ></i>
 
         <nav className={`navbar ${menuOpen ? "active" : ""}`}>
